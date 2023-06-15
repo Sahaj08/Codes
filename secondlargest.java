@@ -24,6 +24,6 @@ public class secondlargest {
 	  System.out.println("secondlargest="+seclargest); 
 		
 	  
-		
+		 
 	}
 }
