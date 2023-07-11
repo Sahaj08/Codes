@@ -1,5 +1,5 @@
 package kunal;
-//left rotaion by two places//
+//left rotaion by D places//
 
 public class leftRotateArray {
 public static void main(String[]args) {
