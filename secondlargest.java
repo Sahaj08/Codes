@@ -1,29 +1,32 @@
-package kunal;
-
-
-
+//program to print second largest number from input array
+package practice;
+import java.util.Scanner;
 public class secondlargest {
-
-	public static void main(String[]args) {
-		int i;
-		int[]arr= {10,20,30,12,59};
-	  int largest=arr[0];
-	  int seclargest=-1;
-	  
-	  for(i=0;i<arr.length;i++) {
-		  if (largest<arr[i]) {
-			  seclargest=largest;
-			  largest=arr[i]; 
-			  }
-		  else if(arr[i]<largest && arr[i]>seclargest) {
-		  seclargest=arr[i]; 
-		  }
-	
-	  }
-	  System.out.println("largest= " +largest);
-	  System.out.println("secondlargest="+seclargest); 
-		
-	  
-		 
+public static void main(String str[]) {
+	int i; int fl; int sl;
+Scanner scr= new Scanner(System.in);
+int a[]= new int[10];
+for(i=0;i<10;i++) {
+	System.out.println("value:  "+i);
+	a[i]= scr.nextInt();
 	}
+ fl=a[0];
+ sl=a[1];
+ for(i=0;i<10;i++) {
+	 if(fl<a[i])
+	 {
+		 sl=fl;
+		 fl=a[i];
+	 }
+	 else
+		 if(sl<a[i])
+		 {
+			 sl=a[i];
+		 }
+ }
+ System.out.println("first largest=  "+fl);
+ System.out.print("second largest=  "+sl);
+}
+
+
 }
