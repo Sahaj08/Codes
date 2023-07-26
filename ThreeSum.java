@@ -6,15 +6,15 @@ public static void main(String[]args) {
 	
 	System.out.print(sum(arr));
 }
-public static ArrayList<Integer>sum(int[]arr){
+public static ArrayList<ArrayList<Integer>>sum(int[]arr){
 	
-	ArrayList<Integer> ans= new ArrayList<>();
+	ArrayList<ArrayList<Integer>> ans= new ArrayList<>();
 	
 	int n=arr.length;
 	Arrays.sort(arr);
-	for(int i=0; i<n; i++) { 
+	for(int i=0; i<n; i++) {  
 		
-		//skipping suplicates elements for i
+		//skipping duplicates elements for i
 		if(i>0 && arr[i]==arr[i-1]) {
 			continue;
 		}
@@ -29,9 +29,9 @@ public static ArrayList<Integer>sum(int[]arr){
 
             if (sum == 0) {
                 // Found a triplet with zero sum
-            	ans.add(arr[i]);
-            	ans.add(arr[j]);
-            	ans.add(arr[k]);
+//            	List<Integer> ls = new ArrayList<>();
+  
+            	ans.add(new ArrayList<>(Arrays.asList(arr[i],arr[j],arr[k])));
             
             	 // Skip duplicate elements for j
                 while (j < k && arr[j] == arr[j + 1]) {
@@ -41,10 +41,10 @@ public static ArrayList<Integer>sum(int[]arr){
                 // Skip duplicate elements for k
                 while (j < k && arr[k] == arr[k - 1]) {
                     k--;
-                }
+                }      
 
                 // Move the pointers
-                j++;
+                j++; 
                 k--;
                 
                 
@@ -58,5 +58,5 @@ public static ArrayList<Integer>sum(int[]arr){
         }
 	}return ans;
 	
-}
+} 
 	}
