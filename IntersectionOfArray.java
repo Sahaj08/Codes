@@ -17,7 +17,7 @@ public class IntersectionOfArray {
 			if(set.contains(arr2[j])) {
 				System.out.print(" " +arr2[j]);
 				count++;
-				set.remove(arr2[j]);
+				set.remove(arr2[j]); 
 			}
 			
 		}
